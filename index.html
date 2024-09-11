@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Container to hold the entire layout -->
+  <div class="container">
+    
+    <!-- Left side (static to-do list categories) -->
+    <div class="left-side">
+      <ul id="taskList">
+        <li onclick="showTaskDetails(this, '📝 My Plan')">📝 My Plan</li>
+        <li onclick="showTaskDetails(this, '❗ Important')">❗ Important</li>
+        <li onclick="showTaskDetails(this, '📅 Planned')">📅 Planned</li>
+        <li onclick="showTaskDetails(this, '👥 Assigned to Me')">👥 Assigned to Me</li>
+        <li onclick="showTaskDetails(this, '📌 Tasks')">📌 Tasks</li>
+        <li onclick="showTaskDetails(this, '🚀 Getting Started')">🚀 Getting Started</li>
+        <li onclick="showTaskDetails(this, '🛒 Groceries')">🛒 Groceries</li>
+      </ul>
+    </div>
+
+    <!-- Right side (task details) -->
+    <div class="right-side">
+      <h2 id="taskHeading">To Do List</h2>
+      
+      <!-- Area to display saved task details -->
+      <div id="savedTasks"></div>
+
+      <!-- Input area at the bottom -->
+      <div class="input-area">
+        <textarea id="taskDetails" placeholder="Click a category on the left to add an action plan..."></textarea>
+        <button class="saveBtn" onclick="saveTaskDetails()">💾 Save Action Plan</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

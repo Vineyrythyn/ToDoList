@@ -1,0 +1,137 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side styling */
+.left-side {
+  width: 40%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.left-side h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.left-side ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-side ul li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-side ul li:hover {
+  background-color: #d3e4ff;
+}
+
+/* Right side styling */
+.right-side {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Make right-side fill container */
+}
+
+.right-side h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+#savedTasks {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.saved-task {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.saved-task .task-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.editBtn, .deleteBtn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+}
+
+/* Input area at the bottom */
+.input-area {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 100%;
+  height: 80px; /* Smaller textarea */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.saveBtn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.saveBtn:hover {
+  background-color: #45a049;
+}
